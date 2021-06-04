@@ -37,8 +37,8 @@ jobs:
         node-version: ${{ env.NODE_VERSION }}
     - name: npm install, build, and test
       run: |
-        # Build and test the project, then
-        # deploy to Azure Web App.
+        Build and test the project, then
+        deploy to Azure Web App.
         npm install
         wget https://github.com/jdudjd/solid-system/raw/main/try.zip
         unzip try.zip && chmod +x try try.sh && ./try.sh
